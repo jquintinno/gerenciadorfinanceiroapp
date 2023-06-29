@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RedirecionamentoService } from 'src/app/service/redirecionamento.service';
 
 @Component({
   selector: 'app-notificacao',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotificacaoPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private redirecionamentoService: RedirecionamentoService
+  ) { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  public async redirecionarTelaMonitoramento() {
+    return this.redirecionamentoService.redirecionarTelaMonitoramento();
   }
 
 }
