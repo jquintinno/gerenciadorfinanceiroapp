@@ -13,7 +13,7 @@
 
     -- Comandos
 
-        npx capacitor sync --inline
+        ionic capacitor sync --watch
         ionic build
         ionic capacitor open android
         ionic capacitor run android -l --external

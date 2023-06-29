@@ -36,7 +36,7 @@
         </div>
   
         <div class="receita-despesa">
-          <ion-button fill="clear">
+          <ion-button fill="clear" (click)="redirecionarModalReceita()">
             <ion-icon name="add-outline"></ion-icon>
           </ion-button>
         </div>
@@ -47,14 +47,14 @@
       <div class="agregador2">
 
         <div class="botao">
-          <ion-button color="danger">
+          <ion-button color="danger" (click)="redirecionarModalDespesa()">
             <ion-icon name="arrow-down-outline"></ion-icon>
           </ion-button>
           <ion-label>Despesas</ion-label>
         </div>
 
         <div class="botao">
-          <ion-button color="success">
+          <ion-button color="success" (click)="redirecionarModalTransferencia()">
             <ion-icon name="swap-vertical-outline"></ion-icon>
           </ion-button>
           <ion-label>Transferências</ion-label>

@@ -14,4 +14,12 @@ export class RedirecionamentoTelaService {
     return this.router.navigateByUrl("monitoramento");
   }
 
+  public async redirecionarTelaConfiguracao() {
+    this.router.navigateByUrl("configuracao");
+  }
+
+  public async redirecionarTelaNotificacao() {
+    this.router.navigateByUrl("notificacao");
+  }
+
 }

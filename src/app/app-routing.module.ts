@@ -19,6 +19,18 @@ const routes: Routes = [
     path: 'notificacao',
     loadChildren: () => import('./screen/notificacao/notificacao.module').then( m => m.NotificacaoPageModule)
   },
+  {
+    path: 'modal-receita',
+    loadChildren: () => import('./component/modal-receita/modal-receita.module').then( m => m.ModalReceitaPageModule)
+  },
+  {
+    path: 'modal-despesa',
+    loadChildren: () => import('./component/modal-despesa/modal-despesa.module').then( m => m.ModalDespesaPageModule)
+  },
+  {
+    path: 'modal-transferencia',
+    loadChildren: () => import('./component/modal-transferencia/modal-transferencia.module').then( m => m.ModalTransferenciaPageModule)
+  },
 ];
 
 @NgModule({
