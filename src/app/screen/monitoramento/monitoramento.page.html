@@ -27,16 +27,35 @@
 
     <div class="card">
 
-      <div class="totalizador">
-        <ion-label>
-          <h2><strong>Saldo Total</strong></h2>
-          <p><b>R$ 10.000,00</b></p>
-        </ion-label>
+      <div class="agregador1">
+        <div class="totalizador">
+          <ion-label>
+            <h2><strong>Saldo Total</strong></h2>
+            <p><b>R$ 10.000,00</b></p>
+          </ion-label>
+        </div>
+  
+        <div class="receita-despesa">
+          <ion-button fill="clear">
+            <ion-icon name="add-outline"></ion-icon>
+          </ion-button>
+        </div>
       </div>
 
-      <div class="receita-despesa">
-        <ion-button>
-          <ion-icon name="add"></ion-icon>
+      <div class="divisor"></div>
+
+      <div class="agregador2">
+        <ion-button color="danger">
+          <ion-icon name="arrow-down-outline"></ion-icon>
+        </ion-button>
+        <ion-button color="primary">
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </ion-button>
+        <ion-button color="success">
+          <ion-icon name="swap-vertical-outline"></ion-icon>
+        </ion-button>
+        <ion-button color="warning">
+          <ion-icon name="card-outline"></ion-icon>
         </ion-button>
       </div>
 
