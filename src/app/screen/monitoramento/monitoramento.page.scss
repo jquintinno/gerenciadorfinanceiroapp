@@ -7,3 +7,24 @@
 ion-icon {
     font-size: 1.4rem;
 }
+
+#section1 {
+    color: #000000;
+    .card {
+        background: white;
+        border-radius: 20px;
+        width: 94%;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .totalizador {
+            p {
+                margin-top: 2vh;
+                font-size: 1.6rem;
+                color: black;
+            }
+        }
+    }
+}

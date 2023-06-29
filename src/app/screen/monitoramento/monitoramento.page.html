@@ -10,10 +10,10 @@
     <ion-title></ion-title>
 
     <ion-buttons slot="end">
-      <ion-button>
+      <ion-button (click)="redirecionarTelaNotificacao()">
         <ion-icon name="notifications-outline"></ion-icon>
       </ion-button>
-      <ion-button>
+      <ion-button (click)="redirecionarTelaConfiguracao()">
         <img src="../../../assets/image/avatar1.jpg" class="avatar"/>
       </ion-button>
     </ion-buttons>
@@ -21,4 +21,27 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="primary"></ion-content>
+<ion-content color="primary">
+
+  <section id="section1">
+
+    <div class="card">
+
+      <div class="totalizador">
+        <ion-label>
+          <h2><strong>Saldo Total</strong></h2>
+          <p><b>R$ 10.000,00</b></p>
+        </ion-label>
+      </div>
+
+      <div class="receita-despesa">
+        <ion-button>
+          <ion-icon name="add"></ion-icon>
+        </ion-button>
+      </div>
+
+    </div>
+
+  </section>
+
+</ion-content>

@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'configuracao',
     loadChildren: () => import('./screen/configuracao/configuracao.module').then( m => m.ConfiguracaoPageModule)
   },
+  {
+    path: 'notificacao',
+    loadChildren: () => import('./screen/notificacao/notificacao.module').then( m => m.NotificacaoPageModule)
+  },
 ];
 
 @NgModule({
