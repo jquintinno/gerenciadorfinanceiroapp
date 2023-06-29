@@ -6,3 +6,10 @@
 
         feature: Implementar tela de Monitoramento Financeiro
         GERFIN29062023130143
+
+    -- Comandos
+
+        npx capacitor sync --inline
+        ionic build
+        ionic capacitor open android
+        ionic capacitor run android -l --external
