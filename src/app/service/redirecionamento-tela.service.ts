@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
-export class RedirecionamentoService {
+export class RedirecionamentoTelaService {
 
   constructor(
     private router: Router

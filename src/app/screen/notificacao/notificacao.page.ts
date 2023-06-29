@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RedirecionamentoService } from 'src/app/service/redirecionamento.service';
+import { RedirecionamentoTelaService } from 'src/app/service/redirecionamento-tela.service';
 
 @Component({
   selector: 'app-notificacao',
@@ -9,7 +9,7 @@ import { RedirecionamentoService } from 'src/app/service/redirecionamento.servic
 export class NotificacaoPage implements OnInit {
 
   constructor(
-    private redirecionamentoService: RedirecionamentoService
+    private redirecionamentoService: RedirecionamentoTelaService
   ) { }
 
   ngOnInit() { }
