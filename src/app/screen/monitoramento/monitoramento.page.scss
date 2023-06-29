@@ -47,13 +47,21 @@ ion-icon {
             justify-content: space-between;
             padding: 10px;
             margin-top: 2px;
-            ion-button {
-                margin: 8px;
-                height: 44px;
-                --border-radius: 12px !important;
-                 ion-icon {
-                    color: white;
-                 }
+            .botao {
+                // border: red dashed 2px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                margin: 6px;
+                ion-button {
+                    width: 60px;
+                    height: 50px;
+                }
+                ion-label {
+                    font-size: 12px;
+                    font-weight: bold;
+                }
             }
         }
     }
