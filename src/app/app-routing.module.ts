@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'modal-transferencia',
     loadChildren: () => import('./component/modal-transferencia/modal-transferencia.module').then( m => m.ModalTransferenciaPageModule)
   },
+  {
+    path: 'modal-pessoa-sistema',
+    loadChildren: () => import('./component/modal-pessoa-sistema/modal-pessoa-sistema.module').then( m => m.ModalPessoaSistemaPageModule)
+  },
 ];
 
 @NgModule({

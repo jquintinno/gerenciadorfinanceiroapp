@@ -35,6 +35,7 @@ ion-icon {
             .receita-despesa {
                 display: flex;
                 flex-direction: column;
+                // border: red dashed 2px;
                 ion-button {
                     --background: #efebff;
                     height: 50px;
@@ -53,7 +54,6 @@ ion-icon {
                 justify-content: center;
                 align-items: center;
                 margin: 6px;
-                // border: red dashed 2px;
                 width: 100px;
                 ion-button {
                     width: 56px;

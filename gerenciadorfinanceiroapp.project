@@ -10,6 +10,7 @@
 
         feature: Implementar tela de Monitoramento Financeiro
         feature: Implementar cadastro de Lançamento Financeiro (Receita)
+        feature: Implementar tela de gerenciamento de pessoas do sistema
         GERFIN29062023130143
 
     -- Comandos

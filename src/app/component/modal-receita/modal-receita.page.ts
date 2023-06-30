@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { IonInput } from '@ionic/angular';
+import { IonInput, ModalController } from '@ionic/angular';
 import { RedirecionamentoTelaService } from 'src/app/service/redirecionamento-tela.service';
+import { ModalPessoaSistemaPage } from '../modal-pessoa-sistema/modal-pessoa-sistema.page';
 
 @Component({
   selector: 'app-modal-receita',
@@ -20,7 +21,8 @@ export class ModalReceitaPage implements OnInit {
   });
 
   constructor(
-    private redirecionamentoTelaService: RedirecionamentoTelaService
+    private redirecionamentoTelaService: RedirecionamentoTelaService,
+    private modalController: ModalController
   ) { }
 
   ngOnInit() { }
@@ -34,6 +36,15 @@ export class ModalReceitaPage implements OnInit {
   public cadastrarReceita() {
     this.redirecionamentoTelaService.fecharModalController();
     console.log(this.formGroup.value);    
+  }
+
+  public async redirecionarModalPessoaSistema() {
+    const modal = await this.modalController.create({
+      component: ModalPessoaSistemaPage,
+      breakpoints: [0, 0.25, 0.50, 0.75, 0.85, 0.90, 1],
+      initialBreakpoint: 0.85
+    });
+    return await modal.present();
   }
 
 }
