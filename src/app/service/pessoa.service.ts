@@ -12,7 +12,7 @@ export class PessoaService {
   ) { }
 
   public findAll() : Observable<any[]> {
-    return this.httpClient.get<any[]>("");
+    return this.httpClient.get<any[]>("http://localhost:8080/pessoa");
   }
 
 }

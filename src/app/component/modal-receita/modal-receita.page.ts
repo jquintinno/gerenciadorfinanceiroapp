@@ -44,6 +44,10 @@ export class ModalReceitaPage implements OnInit {
       breakpoints: [0, 0.25, 0.50, 0.75, 0.85, 0.90, 1],
       initialBreakpoint: 0.85
     });
+    modal.onDidDismiss().then( (parameter) => {
+      console.log(parameter);   
+      this.formGroup.controls["favorecido"].setValue(parameter.data.nome);  
+    });
     return await modal.present();
   }
 

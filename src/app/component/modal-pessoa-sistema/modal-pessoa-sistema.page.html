@@ -10,12 +10,8 @@
 
   <ion-list>
 
-    <ion-item>
-      <ion-label>José Quintinno</ion-label>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>Priscilla Marianno</ion-label>
+    <ion-item *ngFor="let item of pessoaModelList" (click)="selecionarPessoa(item)">
+      <ion-label> {{ item.nome }} </ion-label>
     </ion-item>
 
   </ion-list>

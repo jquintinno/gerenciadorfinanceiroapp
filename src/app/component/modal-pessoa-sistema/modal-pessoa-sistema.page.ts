@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { PessoaService } from 'src/app/service/pessoa.service';
+import { RedirecionamentoTelaService } from 'src/app/service/redirecionamento-tela.service';
 
 @Component({
   selector: 'app-modal-pessoa-sistema',
@@ -7,8 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalPessoaSistemaPage implements OnInit {
 
-  constructor() { }
+  public pessoaModelList: any[] = [];
 
-  ngOnInit() { }
+  constructor(
+    private pessoaService: PessoaService,
+    private modalController: ModalController
+  ) { }
+
+  ngOnInit() { 
+    this.findAll();
+  }
+
+  public async findAll() {
+    this.pessoaService.findAll().subscribe( ( response ) => {
+      this.pessoaModelList = response;     
+    });
+  }
+
+  public async selecionarPessoa(pessoaModel: any) {
+    this.modalController.dismiss(pessoaModel);
+  }
 
 }
