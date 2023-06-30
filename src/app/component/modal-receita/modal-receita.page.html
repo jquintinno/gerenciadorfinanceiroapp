@@ -8,20 +8,20 @@
 
 <ion-content>
 
-  <form>
+  <form [formGroup]="formGroup">
 
     <ion-list>
 
       <ion-item>
-        <ion-input #autofocus type="text" [clearInput]="true" label="Favorecido" label-placement="floating"></ion-input>
+        <ion-input #autofocus type="text" formControlName="favorecido" [clearInput]="true" label="Favorecido" label-placement="floating"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-input type="number" placeholder="R$ 00,00" [clearInput]="true" label="Valor" label-placement="floating"></ion-input>
+        <ion-input type="number" formControlName="valor" placeholder="R$ 00,00" [clearInput]="true" label="Valor" label-placement="floating"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-textarea type="text" label="Observação" label-placement="floating"></ion-textarea>
+        <ion-textarea type="text" formControlName="observacao" label="Observação" label-placement="floating"></ion-textarea>
       </ion-item>
 
     </ion-list>

@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { IonInput } from '@ionic/angular';
 import { RedirecionamentoTelaService } from 'src/app/service/redirecionamento-tela.service';
 
@@ -11,6 +12,12 @@ export class ModalReceitaPage implements OnInit {
 
   @ViewChild("autofocus", { static: false })
   public ionInput: IonInput;
+
+  public formGroup = new FormGroup({
+    favorecido: new FormControl("", [Validators.required, Validators.minLength(4), Validators.maxLength(80)]),
+    valor: new FormControl("", [Validators.required]),
+    observacao: new FormControl("", [])
+  });
 
   constructor(
     private redirecionamentoTelaService: RedirecionamentoTelaService
@@ -26,6 +33,7 @@ export class ModalReceitaPage implements OnInit {
 
   public cadastrarReceita() {
     this.redirecionamentoTelaService.fecharModalController();
+    console.log(this.formGroup.value);    
   }
 
 }
