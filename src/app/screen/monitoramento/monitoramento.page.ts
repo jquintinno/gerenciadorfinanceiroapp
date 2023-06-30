@@ -36,7 +36,11 @@ export class MonitoramentoPage implements OnInit {
       initialBreakpoint: 0.85
     });
     modal.onDidDismiss().then( (parameter) => {
-      this.saldoTotal += Number(parameter.data);
+      if (parameter.role !== 'backdrop') {
+        this.saldoTotal += Number(parameter.data);
+      } else {
+        this.saldoTotal += Number(0);
+      }
     });
     return await modal.present();
   }

@@ -22,12 +22,18 @@ export class ModalPessoaSistemaPage implements OnInit {
 
   public async findAll() {
     this.pessoaService.findAll().subscribe( ( response ) => {
-      this.pessoaModelList = response;     
+      this.pessoaModelList = response;
     });
   }
 
   public async selecionarPessoa(pessoaModel: any) {
     this.modalController.dismiss(pessoaModel);
+  }
+
+  public async find(event: any) {
+    return await this.pessoaService.find(event.target.value).subscribe( (response) => {
+      this.pessoaModelList = response;
+    });
   }
 
 }
