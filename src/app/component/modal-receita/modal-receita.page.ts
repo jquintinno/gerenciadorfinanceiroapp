@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RedirecionamentoTelaService } from 'src/app/service/redirecionamento-tela.service';
 
 @Component({
   selector: 'app-modal-receita',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalReceitaPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private redirecionamentoTelaService: RedirecionamentoTelaService
+  ) { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  public cadastrarReceita() {
+    this.redirecionamentoTelaService.fecharModalController();
   }
 
 }

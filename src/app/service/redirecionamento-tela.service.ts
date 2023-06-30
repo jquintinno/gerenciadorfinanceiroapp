@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { ModalController } from '@ionic/angular';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +8,8 @@ import { Router } from '@angular/router';
 export class RedirecionamentoTelaService {
 
   constructor(
-    private router: Router
+    private router: Router,
+    private modalController: ModalController
   ) { }
 
   public async redirecionarTelaMonitoramento() {
@@ -20,6 +22,10 @@ export class RedirecionamentoTelaService {
 
   public async redirecionarTelaNotificacao() {
     this.router.navigateByUrl("notificacao");
+  }
+
+  public async fecharModalController() {
+    return await this.modalController.dismiss();
   }
 
 }

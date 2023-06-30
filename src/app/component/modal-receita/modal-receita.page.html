@@ -1,13 +1,35 @@
-<ion-header [translucent]="true">
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>modal-receita</ion-title>
+    <ion-title class="ion-text-center">
+      <b>Cadastrar Receita</b>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">modal-receita</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+
+  <form>
+
+    <ion-list>
+
+      <ion-item>
+        <ion-input type="text" [clearInput]="true" label="Favorecido" label-placement="floating"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="number" placeholder="R$ 00,00" [clearInput]="true" label="Valor" label-placement="floating"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-textarea type="text" label="Observação" label-placement="floating"></ion-textarea>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-button expand="block" (click)="cadastrarReceita()">
+      <ion-text>Cadastrar Receita</ion-text>
+    </ion-button>
+
+  </form>
+
 </ion-content>

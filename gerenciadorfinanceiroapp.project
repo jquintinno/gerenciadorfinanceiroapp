@@ -9,6 +9,7 @@
     -- Tarefas
 
         feature: Implementar tela de Monitoramento Financeiro
+        feature: Implementar cadastro de Lançamento Financeiro (Receita)
         GERFIN29062023130143
 
     -- Comandos
