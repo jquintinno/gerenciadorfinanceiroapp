@@ -1,8 +1,13 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title class="ion-text-center">
-      <ion-searchbar placeholder="Procurar Pessoa" (keyup)="find($event)"></ion-searchbar>
-    </ion-title>
+      <ion-searchbar 
+        mode="ios" 
+        placeholder="Procurar Pessoa" 
+        (keyup)="find($event)"
+        animated="true"
+        show-clear-button="focus"
+        show-cancel-button="focus"
+        cancel-button-text="Cancelar"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
