@@ -28,4 +28,8 @@ export class RedirecionamentoTelaService {
     return await this.modalController.dismiss();
   }
 
+  public async fecharModalControllerParameter(parameter: any) {
+    return await this.modalController.dismiss(parameter);
+  }
+
 }

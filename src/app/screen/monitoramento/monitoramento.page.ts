@@ -12,6 +12,8 @@ import { ModalTransferenciaPage } from 'src/app/component/modal-transferencia/mo
 })
 export class MonitoramentoPage implements OnInit {
 
+  public saldoTotal: number = 0;
+
   constructor(
     private router: Router,
     private modalController: ModalController
@@ -32,6 +34,9 @@ export class MonitoramentoPage implements OnInit {
       component: ModalReceitaPage,
       breakpoints: [0, 0.25, 0.50, 0.75, 0.85, 0.90, 1],
       initialBreakpoint: 0.85
+    });
+    modal.onDidDismiss().then( (parameter) => {
+      this.saldoTotal += Number(parameter.data);
     });
     return await modal.present();
   }

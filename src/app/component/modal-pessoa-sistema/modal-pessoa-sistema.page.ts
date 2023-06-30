@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { PessoaService } from 'src/app/service/pessoa.service';
-import { RedirecionamentoTelaService } from 'src/app/service/redirecionamento-tela.service';
 
 @Component({
   selector: 'app-modal-pessoa-sistema',

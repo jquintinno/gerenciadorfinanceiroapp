@@ -22,7 +22,7 @@ export class ModalReceitaPage implements OnInit {
 
   constructor(
     private redirecionamentoTelaService: RedirecionamentoTelaService,
-    private modalController: ModalController
+    private modalController: ModalController,
   ) { }
 
   ngOnInit() { }
@@ -33,9 +33,8 @@ export class ModalReceitaPage implements OnInit {
     }, 1300);
   }
 
-  public cadastrarReceita() {
-    this.redirecionamentoTelaService.fecharModalController();
-    console.log(this.formGroup.value);    
+  public cadastrarReceita() { 
+    this.modalController.dismiss(this.formGroup.controls["valor"].value);
   }
 
   public async redirecionarModalPessoaSistema() {
@@ -45,7 +44,6 @@ export class ModalReceitaPage implements OnInit {
       initialBreakpoint: 0.85
     });
     modal.onDidDismiss().then( (parameter) => {
-      console.log(parameter);   
       this.formGroup.controls["favorecido"].setValue(parameter.data.nome);  
     });
     return await modal.present();
