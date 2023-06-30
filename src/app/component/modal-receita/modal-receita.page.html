@@ -8,7 +8,7 @@
 
 <ion-content>
 
-  <form [formGroup]="formGroup">
+  <form [formGroup]="formGroup" (ngSubmit)="cadastrarReceita()">
 
     <ion-list>
 
@@ -26,7 +26,7 @@
 
     </ion-list>
 
-    <ion-button expand="block" (click)="cadastrarReceita()" class="button-primary">
+    <ion-button type="submit" expand="block" class="button-primary">
       <ion-text>Cadastrar Receita</ion-text>
     </ion-button>
 
