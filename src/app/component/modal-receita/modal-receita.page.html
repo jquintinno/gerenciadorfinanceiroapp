@@ -21,6 +21,40 @@
       </ion-item>
 
       <ion-item>
+        <ion-select 
+          label="Categoria" 
+          label-placement="floating"
+          cancelText="Voltar"
+          okText="Selecionar">
+          <ion-select-option value="1">Receita Fixa</ion-select-option>
+          <ion-select-option value="2">Receita Variável</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-select 
+          label="Conta Bancária" 
+          label-placement="floating"
+          cancelText="Voltar"
+          okText="Selecionar">
+          <ion-select-option *ngFor="let item of contaBancariaModelList" value="1"> {{ item.pessoaModel.nome }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item (click)="cadastrarAnexo()">
+        <ion-grid>
+          <ion-row style="height: 10vh; display: flex; justify-content: center; align-items: center;">
+            <ion-col size="11" style="margin-left: -1rem;">
+              <ion-text>Anexo</ion-text>
+            </ion-col>
+            <ion-col size="1">
+              <ion-icon name="chevron-forward-outline" style="margin-left: 1.3rem; font-size: 18px; color: #808080;"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+
+      <ion-item>
         <ion-textarea type="text" formControlName="observacao" label="Observação" label-placement="floating"></ion-textarea>
       </ion-item>
 

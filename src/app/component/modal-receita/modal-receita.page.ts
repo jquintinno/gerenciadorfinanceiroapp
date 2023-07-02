@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { IonInput, ModalController } from '@ionic/angular';
+import { ContaBancariaService } from 'src/app/service/conta-bancaria.service';
 import { RedirecionamentoTelaService } from 'src/app/service/redirecionamento-tela.service';
 import { ModalPessoaSistemaPage } from '../modal-pessoa-sistema/modal-pessoa-sistema.page';
 
@@ -14,6 +15,8 @@ export class ModalReceitaPage implements OnInit {
   @ViewChild("autofocus", { static: false })
   public ionInput: IonInput;
 
+  public contaBancariaModelList: any[] = [];
+
   public formGroup = new FormGroup({
     favorecido: new FormControl("", [Validators.required, Validators.minLength(4), Validators.maxLength(80)]),
     valor: new FormControl("", [Validators.required]),
@@ -23,9 +26,12 @@ export class ModalReceitaPage implements OnInit {
   constructor(
     private redirecionamentoTelaService: RedirecionamentoTelaService,
     private modalController: ModalController,
+    private contaBancariaService: ContaBancariaService
   ) { }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    this.recuperarContaBancaria();
+  }
 
   ionViewWillEnter() {
     setTimeout(() => {
@@ -35,6 +41,16 @@ export class ModalReceitaPage implements OnInit {
 
   public cadastrarReceita() { 
     this.modalController.dismiss(this.formGroup.controls["valor"].value);
+  }
+
+  public cadastrarAnexo() {
+    console.log("cadastrarAnexo...");
+  }
+
+  public async recuperarContaBancaria() {
+    this.contaBancariaService.findAll().subscribe( (response) => {
+      this.contaBancariaModelList = response;   
+    });
   }
 
   public async redirecionarModalPessoaSistema() {
