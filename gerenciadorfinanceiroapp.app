@@ -18,6 +18,9 @@ https://pgicons.abiro.com/
         GERFIN02072023204210
             feature: Implementar upload de anexos de Receitas
 
+        GERFIN02072023204537
+            feature: Implementar upload de anexos de Receitas
+
     -- Comandos
 
         ionic build
