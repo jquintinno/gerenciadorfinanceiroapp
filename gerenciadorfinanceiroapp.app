@@ -15,6 +15,9 @@ https://pgicons.abiro.com/
         feature: Implementar tela de gerenciamento de pessoas do sistema
         GERFIN29062023130143
 
+        GERFIN02072023204210
+            feature: Implementar upload de anexos de Receitas
+
     -- Comandos
 
         ionic build

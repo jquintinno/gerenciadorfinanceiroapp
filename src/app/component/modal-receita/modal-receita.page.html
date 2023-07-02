@@ -41,7 +41,7 @@
         </ion-select>
       </ion-item>
 
-      <ion-item (click)="cadastrarAnexo()">
+      <ion-item (click)="cadastrarAnexo($event)">
         <ion-grid>
           <ion-row style="height: 10vh; display: flex; justify-content: center; align-items: center;">
             <ion-col size="11" style="margin-left: -1rem;">
@@ -52,6 +52,10 @@
             </ion-col>
           </ion-row>
         </ion-grid>
+      </ion-item>
+
+      <ion-item>
+        <ion-img [src]="image"></ion-img>
       </ion-item>
 
       <ion-item>
