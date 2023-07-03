@@ -41,11 +41,11 @@
         </ion-select>
       </ion-item>
 
-      <ion-item (click)="cadastrarAnexo()">
+      <ion-item>
         <ion-grid>
           <ion-row style="height: 10vh; display: flex; justify-content: center; align-items: center;">
             <ion-col size="11" style="margin-left: -1rem;">
-              <ion-text>Anexo</ion-text>
+              <ion-input type="file" (change)="selecionarAnexo($event)" multiple></ion-input>
             </ion-col>
             <ion-col size="1">
               <ion-icon name="chevron-forward-outline" style="margin-left: 1.3rem; font-size: 18px; color: #808080;"></ion-icon>

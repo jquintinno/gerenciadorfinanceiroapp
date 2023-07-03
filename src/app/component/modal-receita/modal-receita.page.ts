@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { IonInput, ModalController } from '@ionic/angular';
+import { ArquivoService } from 'src/app/service/arquivo.service';
 import { ContaBancariaService } from 'src/app/service/conta-bancaria.service';
 import { RedirecionamentoTelaService } from 'src/app/service/redirecionamento-tela.service';
 import { ModalPessoaSistemaPage } from '../modal-pessoa-sistema/modal-pessoa-sistema.page';
@@ -26,7 +27,8 @@ export class ModalReceitaPage implements OnInit {
   constructor(
     private redirecionamentoTelaService: RedirecionamentoTelaService,
     private modalController: ModalController,
-    private contaBancariaService: ContaBancariaService
+    private contaBancariaService: ContaBancariaService,
+    private arquivoService: ArquivoService
   ) { }
 
   ngOnInit() { 
@@ -43,8 +45,13 @@ export class ModalReceitaPage implements OnInit {
     this.modalController.dismiss(this.formGroup.controls["valor"].value);
   }
 
-  public cadastrarAnexo() {
-    console.log("cadastrarAnexo...");
+  public selecionarAnexo(event: any) {
+    const arquivoList: FileList = event.target.files;
+    if (arquivoList && arquivoList.length > 0) {
+      this.arquivoService.createAll(arquivoList).subscribe(response => {
+        console.log(response);
+      });
+    }
   }
 
   public async recuperarContaBancaria() {
