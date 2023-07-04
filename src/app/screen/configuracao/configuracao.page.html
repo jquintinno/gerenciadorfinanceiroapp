@@ -3,12 +3,141 @@
 
     <ion-buttons slot="start">
       <ion-button (click)="redirecionarTelaMonitoramento()">
-        <ion-icon name="arrow-back-outline"></ion-icon>
+        <ion-icon name="chevron-back-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
 
-    <ion-title>Configuração</ion-title>
+    <ion-title class="ion-text-center">Settings</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="notifications-outline"></ion-icon>
+        <span class="notification">9</span>
+      </ion-button>
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+
+
+  <section id="section1">
+    <ion-avatar>
+      <img src="../../../assets/image/avatar1.jpg" class="avatar"/>
+    </ion-avatar>
+    <ion-icon name="camera-outline"></ion-icon>
+  </section>
+
+  <section id="section2">
+
+    <h3>Theme</h3>
+    <div class="card">
+      <ion-text>Dark Mode</ion-text>
+      <ion-toggle color="secondary" mode="ios"></ion-toggle>
+    </div>
+
+    <h3>Notifications</h3>
+    <div class="card2">
+      <ion-grid style="background: white; width: 92%; border-radius: 10px;">
+        <ion-row>
+          <ion-col size="10">
+            <ion-label>Payment Alert
+              <p>Send notification when new payment received</p>
+            </ion-label>
+          </ion-col>
+          <ion-col size="2">
+            <ion-toggle color="secondary" mode="ios"></ion-toggle>
+          </ion-col>
+        </ion-row>
+        <ion-row style="border-top: #dcdce9 1px solid;">
+          <ion-col size="9">
+            <ion-label>Notifications Sound</ion-label>
+          </ion-col>
+          <ion-col size="3" style="display: flex; justify-content: center; align-items: center;">
+            <b style="color: #6242ff; font-size: 12px; margin-left: 26  px;">Beep</b>
+            <ion-icon name="chevron-forward-outline" style="color: #dcdce9; margin-left: 6px;"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <h3>Profile Settings</h3>
+    <div class="card2">
+      <ion-grid style="background: white; width: 92%; border-radius: 10px;">
+        <ion-row style="padding: 10px;">
+          <ion-col size="8">
+            <ion-label>Change Username</ion-label>
+          </ion-col>
+          <ion-col size="4">
+            <ion-icon name="chevron-forward-outline" style="color: #dcdce9; margin-left: 78px;"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row style="padding: 10px; border-top: #dcdce9 1px solid;">
+          <ion-col size="8">
+            <ion-label>Update E-mail</ion-label>
+          </ion-col>
+          <ion-col size="4">
+            <ion-icon name="chevron-forward-outline" style="color: #dcdce9; margin-left: 78px;"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row style="padding: 10px; border-top: #dcdce9 1px solid;">
+          <ion-col size="8">
+            <ion-label>Address</ion-label>
+          </ion-col>
+          <ion-col size="4">
+            <ion-icon name="chevron-forward-outline" style="color: #dcdce9; margin-left: 78px;"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row style="padding: 10px; border-top: #dcdce9 1px solid;">
+          <ion-col size="8">
+            <ion-label>Private Profile</ion-label>
+          </ion-col>
+          <ion-col size="4">
+            <ion-icon name="chevron-forward-outline" style="color: #dcdce9; margin-left: 78px;"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <h3>Security</h3>
+    <div class="card2">
+      <ion-grid style="background: white; width: 92%; border-radius: 10px;">
+        <ion-row style="padding: 10px;">
+          <ion-col size="8">
+            <ion-label>Update Password</ion-label>
+          </ion-col>
+          <ion-col size="4">
+            <ion-icon name="chevron-forward-outline" style="color: #dcdce9; margin-left: 78px;"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row style="padding: 10px; border-top: #dcdce9 1px solid;">
+          <ion-col size="8">
+            <ion-label>2 Step Verification</ion-label>
+          </ion-col>
+          <ion-col size="4">
+            <ion-icon name="chevron-forward-outline" style="color: #dcdce9; margin-left: 78px;"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row style="padding: 2px; border-top: #dcdce9 1px solid; display: flex; justify-content: center; align-items: center;">
+          <ion-col size="8">
+            <ion-label>Log out all devices</ion-label>
+          </ion-col>
+          <ion-col size="4">
+            <ion-toggle checked="true" color="secondary" mode="ios" style="margin-left: 48px;"></ion-toggle>
+          </ion-col>
+        </ion-row>
+        <ion-row style="padding: 10px; border-top: #dcdce9 1px solid;">
+          <ion-col size="8">
+            <ion-label>Private Profile</ion-label>
+          </ion-col>
+          <ion-col size="4">
+            <ion-icon name="chevron-forward-outline" style="color: #dcdce9; margin-left: 78px;"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+  </section>
+
+</ion-content>
