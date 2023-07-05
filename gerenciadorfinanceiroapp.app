@@ -24,6 +24,9 @@ https://pgicons.abiro.com/
 
     -- Comandos
 
+        export CAPACITOR_ANDROID_STUDIO_PATH=/opt/android-studio/bin/studio.sh
+        export PATH=$PATH:/opt/gradle-8.2/bin
+
         ionic build
         ionic capacitor copy android
         ionic capacitor open android
