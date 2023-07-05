@@ -23,12 +23,16 @@ https://pgicons.abiro.com/
             feature: Implementar tela de Configuração do Usuário
             feature: Implementar atualização de imagem do perfil
 
+                npm install @capacitor/camera
+                npm install @ionic/pwa-elements
+
     -- Comandos
 
         export CAPACITOR_ANDROID_STUDIO_PATH=/opt/android-studio/bin/studio.sh
         export PATH=$PATH:/opt/gradle-8.2/bin
 
         ionic build
+        npx capacitor sync
         ionic capacitor copy android
         ionic capacitor open android
         ionic capacitor run android -l --external
