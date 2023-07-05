@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Camera, CameraResultType } from '@capacitor/camera';
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import { ToastController } from '@ionic/angular';
 import { RedirecionamentoTelaService } from 'src/app/service/redirecionamento-tela.service';
 
@@ -27,9 +27,11 @@ export class ConfiguracaoPage implements OnInit {
 
   public async alterarImagemPerfil() {
     const image = await Camera.getPhoto({
-      quality: 90,
-      allowEditing: true,
-      resultType: CameraResultType.Uri
+      quality: 100,
+      allowEditing: false,
+      saveToGallery: false,
+      resultType: CameraResultType.Uri,
+      source: CameraSource.Prompt
     });
     this.imagemUsuario = image.webPath;
     console.log(image);

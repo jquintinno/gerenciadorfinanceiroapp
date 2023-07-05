@@ -2,7 +2,7 @@
 
 (https://finapp.bragherstudio.com/view22/index.html)
 
-/Users/quintinnodigital/Desktop/gerenciadorfinanceiroapp/android/app/build/outputs/apk/debug
+/home/Quintinno/Desenvolvimento/gerenciadorfinanceiroapp/android/app/build/outputs/apk/debug
 
 https://pgicons.abiro.com/
 
