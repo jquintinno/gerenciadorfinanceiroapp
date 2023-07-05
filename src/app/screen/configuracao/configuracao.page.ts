@@ -8,11 +8,15 @@ import { RedirecionamentoTelaService } from 'src/app/service/redirecionamento-te
 })
 export class ConfiguracaoPage implements OnInit {
 
+  public imagemUsuario: any;
+
   constructor(
     private redirecionamentoService: RedirecionamentoTelaService
   ) { }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    this.imagemUsuario = "../../../assets/image/avatar5.jpg";
+  }
 
   public async redirecionarTelaMonitoramento() {
     return await this.redirecionamentoService.redirecionarTelaMonitoramento();

@@ -21,6 +21,7 @@ https://pgicons.abiro.com/
         GERFIN04072023165615
 
             feature: Implementar tela de Configuração do Usuário
+            feature: Implementar atualização de imagem do perfil
 
     -- Comandos
 

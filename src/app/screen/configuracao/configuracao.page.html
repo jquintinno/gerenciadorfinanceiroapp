@@ -24,7 +24,7 @@
 
   <section id="section1">
     <ion-avatar>
-      <img src="../../../assets/image/avatar1.jpg" class="avatar"/>
+      <img [src]="imagemUsuario" class="avatar"/>
     </ion-avatar>
     <ion-icon name="camera-outline"></ion-icon>
   </section>
@@ -139,5 +139,9 @@
     </div>
 
   </section>
+
+  <ion-button expand="block" color="danger" fill="outline" style="margin-top: 20px;">
+    Disconnect
+  </ion-button>
 
 </ion-content>
