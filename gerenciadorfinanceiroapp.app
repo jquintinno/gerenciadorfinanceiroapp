@@ -22,9 +22,14 @@ https://pgicons.abiro.com/
 
             feature: Implementar tela de Configuração do Usuário
             feature: Implementar atualização de imagem do perfil
+            feature: Implementar Dark Mode
 
                 npm install @capacitor/camera
                 npm install @ionic/pwa-elements
+
+        GERFIN05072023162859
+
+            feature: Implementar Modelagem de Paramêtros do Ususário
 
     -- Comandos
 
