@@ -35,11 +35,7 @@ export class ModalReceitaPage implements OnInit {
     this.recuperarContaBancaria();
   }
 
-  ionViewWillEnter() {
-    setTimeout(() => {
-      this.ionInput.setFocus();
-    }, 1300);
-  }
+  ionViewWillEnter() { }
 
   public cadastrarReceita() { 
     this.modalController.dismiss(this.formGroup.controls["valor"].value);
@@ -70,6 +66,12 @@ export class ModalReceitaPage implements OnInit {
       this.formGroup.controls["favorecido"].setValue(parameter.data.nome);  
     });
     return await modal.present();
+  }
+
+  private habilitarFocoCampo() {
+    setTimeout(() => {
+      this.ionInput.setFocus();
+    }, 1300);
   }
 
 }

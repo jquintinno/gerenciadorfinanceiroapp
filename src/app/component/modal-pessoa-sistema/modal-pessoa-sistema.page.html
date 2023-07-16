@@ -1,4 +1,4 @@
-<ion-header class="ion-no-border">
+<ion-header class="ion-no-border" *ngIf="!isHabilitarFormulario">
   <ion-toolbar>
       <ion-searchbar 
         mode="ios" 
@@ -13,11 +13,29 @@
 
 <ion-content>
 
-  <ion-list>
+  <ion-list *ngIf="!isHabilitarFormulario">
 
     <ion-item *ngFor="let item of pessoaModelList" (click)="selecionarPessoa(item)">
       <ion-label> {{ item.nome }} </ion-label>
     </ion-item>
+
+    <ion-item detail="true" (click)="habilitarFormularioPessoa()">
+      <ion-label>Cadastrar Pessoa</ion-label>
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list>
+
+    <form *ngIf="isHabilitarFormulario">
+
+      <ion-item>
+        <ion-input type="text" label="Nome" label-placement="floating"></ion-input>
+      </ion-item>
+
+      <ion-button expand="full">Cadastrar Pessoa</ion-button>
+
+    </form>
 
   </ion-list>
 

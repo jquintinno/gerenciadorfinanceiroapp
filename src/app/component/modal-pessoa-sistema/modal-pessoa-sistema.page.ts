@@ -11,6 +11,8 @@ export class ModalPessoaSistemaPage implements OnInit {
 
   public pessoaModelList: any[] = [];
 
+  public isHabilitarFormulario: boolean = false;
+
   constructor(
     private pessoaService: PessoaService,
     private modalController: ModalController
@@ -34,6 +36,10 @@ export class ModalPessoaSistemaPage implements OnInit {
     return await this.pessoaService.find(event.target.value).subscribe( (response) => {
       this.pessoaModelList = response;
     });
+  }
+
+  public habilitarFormularioPessoa() {
+    this.isHabilitarFormulario = true;
   }
 
 }
