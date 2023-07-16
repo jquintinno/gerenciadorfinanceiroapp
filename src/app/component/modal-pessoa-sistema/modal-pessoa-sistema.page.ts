@@ -33,7 +33,6 @@ export class ModalPessoaSistemaPage implements OnInit {
   }
 
   public async selecionarPessoa(pessoaModel: any) {
-    debugger
     this.modalController.dismiss(pessoaModel);
   }
 

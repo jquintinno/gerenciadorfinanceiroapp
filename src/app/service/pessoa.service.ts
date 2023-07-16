@@ -21,7 +21,6 @@ export class PessoaService {
   }
 
   public saveOne(pessoaModel: any) : Observable<any> {
-    console.log(pessoaModel);
     return this.httpClient.post<any>(environment.URL_API.concat("/pessoa"), pessoaModel);
   }
 
