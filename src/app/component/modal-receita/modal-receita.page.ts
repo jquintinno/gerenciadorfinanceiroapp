@@ -68,6 +68,8 @@ export class ModalReceitaPage implements OnInit {
     return await modal.present();
   }
 
+  public async redirecionarModalProdutoServico() { }
+
   private habilitarFocoCampo() {
     setTimeout(() => {
       this.ionInput.setFocus();

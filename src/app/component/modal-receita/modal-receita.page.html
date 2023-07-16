@@ -17,6 +17,17 @@
       </ion-item>
 
       <ion-item>
+        <ion-select
+          label="Produto ou Serviço"
+          label-placement="floating"
+          cancelText="Voltar"
+          okText="Selecionar">
+          <ion-select-option value="1">Receita Fixa</ion-select-option>
+          <ion-select-option value="2">Receita Variável</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
         <ion-input type="number" formControlName="valor" placeholder="R$ 00,00" [clearInput]="true" label="Valor" label-placement="floating"></ion-input>
       </ion-item>
 
