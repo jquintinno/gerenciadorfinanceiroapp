@@ -20,8 +20,9 @@ export class PessoaService {
     return this.httpClient.get<any[]>(`${environment.URL_API.concat("/pessoa")}/filtro?nome=${nome}`);
   }
 
-  public saveOne(pessoaModel: any) {
+  public saveOne(pessoaModel: any) : Observable<any> {
     console.log(pessoaModel);
+    return this.httpClient.post<any>(environment.URL_API.concat("/pessoa"), pessoaModel);
   }
 
 }

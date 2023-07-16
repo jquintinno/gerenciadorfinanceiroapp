@@ -19,7 +19,7 @@ export class ModalPessoaSistemaPage implements OnInit {
 
   constructor(
     private pessoaService: PessoaService,
-    private modalController: ModalController
+    private modalController: ModalController,
   ) { }
 
   ngOnInit() { 
@@ -50,11 +50,13 @@ export class ModalPessoaSistemaPage implements OnInit {
   public cadastrarPessoa() {
     const pessoaModel = {
       nome: this.nomePessoa,
-      tipoPessoaModal: {
+      tipoPessoaModel: {
         codigo: this.codigoTipoPessoa
       }
     }
-    this.modalController.dismiss(pessoaModel);
+    this.pessoaService.saveOne(pessoaModel).subscribe(response => {
+      this.modalController.dismiss(pessoaModel);
+    });
   }
 
 }

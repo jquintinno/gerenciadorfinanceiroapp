@@ -11,6 +11,12 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-header class="ion-no-border" *ngIf="isHabilitarFormulario">
+  <ion-toolbar class="ion-text-center">
+      <ion-title>Cadastrar Pessoa</ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <ion-content>
 
   <ion-list *ngIf="!isHabilitarFormulario">
@@ -46,7 +52,7 @@
         </ion-select>
       </ion-item>
 
-      <ion-button type="submit" expand="full">Cadastrar Pessoa</ion-button>
+      <ion-button type="submit" expand="full" style="margin-top: 20px;">Cadastrar Pessoa</ion-button>
 
     </form>
 
