@@ -31,6 +31,10 @@ https://pgicons.abiro.com/
 
             feature: Implementar Modelagem de Paramêtros do Ususário
 
+        GERFIN16072023124723
+
+            feature: Implementar Cadastro de Pessoa
+
     -- Comandos
 
         export CAPACITOR_ANDROID_STUDIO_PATH=/opt/android-studio/bin/studio.sh
