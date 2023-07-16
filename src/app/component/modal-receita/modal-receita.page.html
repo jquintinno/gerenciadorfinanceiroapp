@@ -37,7 +37,7 @@
           label-placement="floating"
           cancelText="Voltar"
           okText="Selecionar">
-          <ion-select-option *ngFor="let item of contaBancariaModelList" value="1"> {{ item.pessoaModel.nome }}</ion-select-option>
+          <ion-select-option *ngFor="let item of contaBancariaModelList" value="item.codigo"> {{ item.pessoaModel.nome }}</ion-select-option>
         </ion-select>
       </ion-item>
 

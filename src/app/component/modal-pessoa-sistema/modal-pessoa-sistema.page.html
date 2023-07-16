@@ -33,6 +33,19 @@
         <ion-input type="text" label="Nome" label-placement="floating" name="nomePessoa" [(ngModel)]="nomePessoa"></ion-input>
       </ion-item>
 
+      <ion-item>
+        <ion-select 
+          name="codigoTipoPessoa" 
+          [(ngModel)]="codigoTipoPessoa"
+          label="Tipo de Pessoa" 
+          label-placement="floating"
+          cancelText="Voltar"
+          okText="Selecionar">
+          <ion-select-option value="1">Pessoa Física</ion-select-option>
+          <ion-select-option value="2">Pessoa Jurídica</ion-select-option>
+        </ion-select>
+      </ion-item>
+
       <ion-button type="submit" expand="full">Cadastrar Pessoa</ion-button>
 
     </form>

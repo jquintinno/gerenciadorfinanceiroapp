@@ -15,6 +15,8 @@ export class ModalPessoaSistemaPage implements OnInit {
 
   public nomePessoa: any;
 
+  public codigoTipoPessoa: any;
+
   constructor(
     private pessoaService: PessoaService,
     private modalController: ModalController
@@ -47,7 +49,10 @@ export class ModalPessoaSistemaPage implements OnInit {
 
   public cadastrarPessoa() {
     const pessoaModel = {
-      nome: this.nomePessoa
+      nome: this.nomePessoa,
+      tipoPessoaModal: {
+        codigo: this.codigoTipoPessoa
+      }
     }
     this.modalController.dismiss(pessoaModel);
   }

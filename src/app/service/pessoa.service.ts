@@ -20,4 +20,8 @@ export class PessoaService {
     return this.httpClient.get<any[]>(`${environment.URL_API.concat("/pessoa")}/filtro?nome=${nome}`);
   }
 
+  public saveOne(pessoaModel: any) {
+    console.log(pessoaModel);
+  }
+
 }
