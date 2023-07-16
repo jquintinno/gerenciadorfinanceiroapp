@@ -1,6 +1,6 @@
 {
 	"appId": "io.ionic.starter",
-	"appName": "gerenciadorfinanceiroapp",
+	"appName": "GERFIN",
 	"webDir": "www",
 	"server": {
 		"androidScheme": "https"
