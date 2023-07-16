@@ -27,13 +27,13 @@
 
   <ion-list>
 
-    <form *ngIf="isHabilitarFormulario">
+    <form *ngIf="isHabilitarFormulario" (ngSubmit)="cadastrarPessoa()">
 
       <ion-item>
-        <ion-input type="text" label="Nome" label-placement="floating"></ion-input>
+        <ion-input type="text" label="Nome" label-placement="floating" name="nomePessoa" [(ngModel)]="nomePessoa"></ion-input>
       </ion-item>
 
-      <ion-button expand="full">Cadastrar Pessoa</ion-button>
+      <ion-button type="submit" expand="full">Cadastrar Pessoa</ion-button>
 
     </form>
 

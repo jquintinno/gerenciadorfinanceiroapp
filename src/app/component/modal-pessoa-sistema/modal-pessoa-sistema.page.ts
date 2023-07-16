@@ -13,6 +13,8 @@ export class ModalPessoaSistemaPage implements OnInit {
 
   public isHabilitarFormulario: boolean = false;
 
+  public nomePessoa: any;
+
   constructor(
     private pessoaService: PessoaService,
     private modalController: ModalController
@@ -29,6 +31,7 @@ export class ModalPessoaSistemaPage implements OnInit {
   }
 
   public async selecionarPessoa(pessoaModel: any) {
+    debugger
     this.modalController.dismiss(pessoaModel);
   }
 
@@ -40,6 +43,13 @@ export class ModalPessoaSistemaPage implements OnInit {
 
   public habilitarFormularioPessoa() {
     this.isHabilitarFormulario = true;
+  }
+
+  public cadastrarPessoa() {
+    const pessoaModel = {
+      nome: this.nomePessoa
+    }
+    this.modalController.dismiss(pessoaModel);
   }
 
 }
