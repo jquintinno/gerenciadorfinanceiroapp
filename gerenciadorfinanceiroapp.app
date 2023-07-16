@@ -35,6 +35,10 @@ https://pgicons.abiro.com/
 
             feature: Implementar Cadastro de Pessoa
 
+        GERFIN16072023172816
+
+            feature: Implementar Cadastro de Produto ou Serviço
+
     -- Comandos
 
         export CAPACITOR_ANDROID_STUDIO_PATH=/opt/android-studio/bin/studio.sh
